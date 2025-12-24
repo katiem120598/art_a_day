@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'girlypop';
+    src: url(../fonts/CherryBombOne-Regular.ttf)
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    height: 100vh;
+}
+
+p{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Work Sans, sans-serif;
+    margin: 0;
+    color: white;
+    margin: 0 0 50px 0;
+}
+h1{
+    z-index:1;
+    font-family: 'girlypop';
+    color: white;
+    font-size: 2rem;
+    font-weight: normal;
+    z-index: 100;
+    position: relative;
+    text-align: center;
+    margin: 50px 0 10px 0;
+}
+h2{
+    font-size: 17px;
+    font-weight: 400;
+    font-family: Work Sans, sans-serif;
+    margin: 0;
+    color: white;
+    padding: 0px;
+    text-align: center;
+    font-style:italic;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.image-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 20vw);
+    padding: 30px;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.tile{
+    text-align: center;
+}
+
+.tile img{
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+}
