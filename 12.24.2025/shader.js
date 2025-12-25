@@ -3,17 +3,27 @@ let mic, fft, micReady = false;
 let fftTexture;
 let useSpec = 1.0;
 let useTail = 1.0;
+let audioStarted = false;
 
 function preload() {
   myShader = loadShader('vshader.vert', 'fshader.frag');
 }
 
 function setup() {
-  dimx = min(windowHeight-200, windowWidth-200);
+  dimx = min(windowHeight-300, windowWidth-300);
   dimy = dimx;
   createCanvas(dimx,dimy,WEBGL);
   pixelDensity(1);
-  
+  shader(myShader);
+  if (!audioStarted) {
+    userStartAudio().then(() => {
+      startMic();
+      audioStarted = true;
+    });
+  }
+}
+
+function startMic() {
   navigator.mediaDevices.enumerateDevices().then(devices => {
     let vbDevice = devices.find(d => d.label.includes("CABLE Output"));
     if (vbDevice) {
@@ -29,9 +39,6 @@ function setup() {
       console.warn("❌ VB-Audio Cable not found!");
     }
   });
-
-  pixelDensity(1);
-  shader(myShader);
 }
 
 function draw() {
@@ -62,12 +69,6 @@ function draw() {
   myShader.setUniform('u_key2', useTail);
 
   rect(0, 0, width, height);
-}1
-
-function windowResized()
-{
-  resizeCanvas(windowWidth*.9, windowHei22ght*.9);
-  fftTexture = createImage(width, 1);
 }
 
 function keyPressed(){
@@ -108,7 +109,7 @@ function byteArrayToImage(array) {
 }
 
 function windowResized() {
-  dimx = min(windowHeight-200, windowWidth-200);
+  dimx = min(windowHeight-300, windowWidth-300);
   dimy = dimx;
   resizeCanvas(dimx,dimy);
 }

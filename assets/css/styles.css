@@ -49,7 +49,7 @@ a{
 
 .image-grid{
     display: grid;
-    grid-template-columns: repeat(auto-fit, 20vw);
+    grid-template-columns: repeat(auto-fit, minmax(100px,15vw));
     padding: 50px;
     gap: 50px;
     justify-content: center;
