@@ -50,8 +50,8 @@ a{
 .image-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, 20vw);
-    padding: 30px;
-    gap: 30px;
+    padding: 50px;
+    gap: 50px;
     justify-content: center;
     margin-top: 30px;
 }
