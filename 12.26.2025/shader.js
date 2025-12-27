@@ -48,7 +48,8 @@ function preload() {
 function setup() {
   dimx = min(windowHeight-300, windowWidth-300);
   dimy = dimx;
-  createCanvas(dimx,dimy,WEBGL);
+  let c = createCanvas(dimx,dimy,WEBGL);
+  c.elt.style.border = "1px solid #373737ff";
   pixelDensity(1);
   shader(myShader);
 

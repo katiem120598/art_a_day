@@ -34,7 +34,7 @@ void main() {
     
     float wavespeed = 10.0;
     float period = 25.0;
-    float u_duration = 5.0;
+    float u_duration = 10.0;
     float largestdist = u_duration*wavespeed*period;
 
     float maxdist1 = u_time1*wavespeed*period;

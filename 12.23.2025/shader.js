@@ -8,7 +8,8 @@ function setup() {
   // Use WEBGL renderer for shaders
   dimx = min(windowHeight-200, windowWidth-200);
   dimy = dimx;
-  createCanvas(dimx,dimy,WEBGL);
+  let c = createCanvas(dimx,dimy,WEBGL);
+  c.elt.style.border = "1px solid #373737ff";
   pixelDensity(1);
 }
 
