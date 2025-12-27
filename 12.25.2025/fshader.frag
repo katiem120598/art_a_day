@@ -32,16 +32,21 @@ void main() {
     float f1 = 10.0;
     float f2 = 7.0;
     float f3 = 13.0;
+
     float r11 = 10.0*u_time1+45.0;
-    float r21 = 5.0*u_time2*u_time2+23.0;
-    float r31 = 5.0*u_time3*u_time3+60.0;
-    float r41 = u_time4*u_time4*u_time4+15.0;
-    float r51 = 10.0*u_time5 + 35.0;
     float r12 = 10.0*u_time1+43.0;
+
+    float r21 = 5.0*u_time2*u_time2+23.0;
     float r22 = 3.0*u_time2*u_time2+22.0;
+
+    float r31 = 5.0*u_time3*u_time3+60.0; 
     float r32 = 5.0*u_time3*u_time3+57.0;
+
+    float r41 = u_time4*u_time4*u_time4+15.0;
     float r42 = u_time4*u_time4+14.0;
-    float r52 = 10.0*u_time4 + 30.0;
+
+    float r51 = 10.0*u_time5 + 35.0;
+    float r52 = 10.0*u_time5 + 30.0;
 
     // 1.0 inside the circle, 0.0 outside
     float inside11 = step(r11, d1);
