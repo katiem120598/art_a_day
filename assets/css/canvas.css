@@ -24,6 +24,18 @@ p{
     color: white;
     margin: 0 0 50px 0;
 }
+
+p1{
+    font-size: 15px;
+    font-weight: 400;
+    font-family: Work Sans, sans-serif;
+    margin: 0;
+    color: white;
+    margin: 0 0 50px 0;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
 h1{
     z-index:1;
     font-family: 'girlypop';
